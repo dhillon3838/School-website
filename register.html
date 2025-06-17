@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Admission Form (Admin Only)</h2>
+    <form>
+      <fieldset>
+        <legend>Student Details</legend>
+        <input type="text" placeholder="Full Name of Student" required />
+        <input type="date" placeholder="Date of Birth" required />
+        <select required>
+          <option value="">Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        <input type="text" placeholder="Aadhar Card Number" required />
+        <input type="text" placeholder="Previous School Name" />
+        <input type="text" placeholder="Board Studied" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Parent Details</legend>
+        <input type="text" placeholder="Father's Name" required />
+        <input type="text" placeholder="Mother's Name" required />
+        <input type="tel" placeholder="Father's Mobile Number" required />
+        <input type="tel" placeholder="Mother's Mobile Number" required />
+        <input type="email" placeholder="Parent Email Address" required />
+        <input type="text" placeholder="Occupation of Parents" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Address</legend>
+        <input type="text" placeholder="Address Line 1" required />
+        <input type="text" placeholder="Address Line 2" />
+        <input type="text" placeholder="City" required />
+        <input type="text" placeholder="District" required />
+        <input type="text" placeholder="State" required />
+        <input type="text" placeholder="PIN Code" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Admission Details</legend>
+        <select required>
+          <option value="">Standard Applied For</option>
+          <option>Nursery</option>
+          <option>LKG</option>
+          <option>UKG</option>
+          <option>1st - 12th</option>
+        </select>
+        <select required>
+          <option value="">Academic Year</option>
+          <option>2025-2026</option>
+          <option>2026-2027</option>
+        </select>
+        <textarea placeholder="Why do you want to join Scholar's Senior School?" required></textarea>
+      </fieldset>
+
+      <button type="submit">Register Student</button>
+    </form>
+  </div>
+</body>
+</html>

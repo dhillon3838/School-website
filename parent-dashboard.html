@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parent Dashboard - Scholar's Senior School</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body onload="checkLogin()">
+
+  <header>
+    <div class="container">
+      <h1 class="logo">Scholar's Senior School</h1>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="admission.html">Admissions</a>
+        <a href="apply.html">Apply Now</a>
+        <a href="register.html">Student Register</a>
+        <a href="login.html" class="active">Parent Login</a>
+        <a href="know-about-us.html">Know About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard-section">
+      <div class="container">
+        <h2>Welcome to the Parent Dashboard</h2>
+        <p>👋 Hello Parent! Here you can view your fee payment history.</p>
+
+        <div class="dashboard-box">
+          <h3>📌 Pending Fees</h3>
+          <ul>
+            <li>Term 2 - ₹15,000 (Due by 30 July 2025)</li>
+            <li>Transport Fee - ₹3,000 (Due by 10 August 2025)</li>
+          </ul>
+        </div>
+
+        <div class="dashboard-box">
+          <h3>✅ Paid Fees</h3>
+          <ul>
+            <li>Term 1 - ₹15,000 (Paid on 1 April 2025)</li>
+            <li>Admission Fee - ₹5,000 (Paid on 15 March 2025)</li>
+          </ul>
+        </div>
+
+        <button onclick="logout()" class="btn btn-danger">Logout</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Scholar's Senior School</p>
+    </div>
+  </footer>
+
+  <script>
+    function checkLogin() {
+      const loggedIn = sessionStorage.getItem("isLoggedIn");
+      if (!loggedIn) {
+        alert("You must be logged in to access this page.");
+        window.location.href = "login.html";
+      }
+    }
+
+    function logout() {
+      sessionStorage.removeItem("isLoggedIn");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
